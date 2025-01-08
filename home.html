@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "Poppins", sans-serif;
+        margin: 0;
+        padding: 0;
+        line-height: 1.6;
+        color: #444;
+        background: linear-gradient(120deg, #f0f4c3, #e1bee7);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+        background-image: url("974182.jpg");
+      }
+
+      .content {
+        background: #ffffffee;
+        border-radius: 15px;
+        max-width: 1200px;
+        margin: 20px;
+        padding: 25px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+      }
+
+      h1,
+      h2 {
+        text-align: center;
+        color: #4a148c;
+        margin: 10px 0;
+      }
+
+      h1 {
+        font-size: 48px;
+        font-weight: 700;
+      }
+
+      h2 {
+        font-size: 28px;
+        font-weight: 400;
+      }
+
+      .container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
+        justify-content: center;
+        align-items: flex-start;
+      }
+
+      .column {
+        flex: 1;
+        max-width: 45%;
+        padding: 10px;
+        text-align: justify;
+      }
+
+      .column img {
+        width: 100%;
+        max-width: 350px;
+        height: auto;
+        border-radius: 10px;
+        display: block;
+        margin: 0 auto;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+      }
+
+      .column h1 {
+        font-size: 26px;
+        color: #4a148c;
+      }
+
+      .column p {
+        font-size: 16px;
+        line-height: 1.8;
+        color: #333;
+      }
+
+      section {
+        margin-bottom: 30px;
+      }
+
+      #skill {
+        background: #fafafa;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      }
+
+      #skill ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+        justify-content: center;
+      }
+
+      #skill ul li {
+        font-size: 16px;
+        color: #4a148c;
+        font-weight: 500;
+        padding: 5px 10px;
+        background: #e1bee7;
+        border-radius: 5px;
+      }
+
+      #projects {
+        background: #fafafa;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      }
+
+      #projects ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      #projects ul li {
+        margin-bottom: 15px;
+        padding: 10px;
+        background: #fff;
+        border-left: 4px solid #4a148c;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      #projects ul li h3 {
+        font-size: 18px;
+        color: #4a148c;
+        margin: 0 0 5px;
+      }
+
+      #projects ul li p {
+        margin: 0;
+        color: #555;
+        font-size: 14px;
+        line-height: 1.6;
+      }
+
+      footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        padding: 20px;
+        background-color: #4a148c;
+        color: #fff;
+        margin-top: 20px;
+        border-radius: 10px;
+      }
+
+      footer a {
+        color: #ffd54f;
+        text-decoration: none;
+      }
+
+      footer a:hover {
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="content">
+      <h1>My Portfolio</h1>
+      <div class="container">
+        <div class="column">
+          <img
+            src="WhatsApp Image 2025-01-06 at 21.58.48_2288b2d81736181266.jpg"
+            alt="Your Photo"
+          />
+        </div>
+        <div class="column">
+          <h1>Mohamed Irfan</h1>
+          <p>
+            B.E. in Electronics and Communication Engineering<br />
+            Full-Stack Developer<br /><br />
+            Enthusiastic about creating efficient and visually appealing web
+            solutions. Skilled in working with modern frameworks and
+            technologies to deliver high-quality projects tailored to user
+            needs.
+          </p>
+        </div>
+      </div>
+
+      <section id="skill">
+        <h2>Skills</h2>
+        <ul>
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>Python</li>
+          <li>Java</li>
+        </ul>
+      </section>
+
+      <section id="projects">
+        <h2>Projects</h2>
+        <ul>
+          <li>
+            <h3>Weather App</h3>
+            <p>
+              Created a weather forecasting app using React and OpenWeatherMap
+              API. Features include real-time weather updates, temperature
+              conversions, and a user-friendly interface.
+            </p>
+          </li>
+          <li>
+            <h3>Task Manager</h3>
+            <p>
+              Designed a task management system with Node.js and MongoDB. Users
+              can create, update, and delete tasks, with progress tracking and
+              deadline reminders.
+            </p>
+          </li>
+          <li>
+            <h3>E-commerce Application</h3>
+            <p>
+              Built a full-stack e-commerce application using MERN stack.
+              Includes product listing, shopping cart, user authentication, and
+              secure payment integration.
+            </p>
+          </li>
+        </ul>
+      </section>
+    </div>
+
+    <footer>
+      <p>&copy; 2025 Mohamed Irfan. All Rights Reserved.</p>
+      <p>
+        <a href="mailto:your-email@example.com">Email</a> |
+        <a href="https://linkedin.com/in/your-linkedin">LinkedIn</a> |
+        <a href="https://github.com/your-github">GitHub</a>
+      </p>
+    </footer>
+  </body>
+</html>
