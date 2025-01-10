@@ -4,98 +4,121 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio</title>
-  </head>
+    <style>
+      body {
+        background-color: black;
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        overflow-x: hidden;
+      }
+      nav {
+        margin-left: 900px;
+        margin-top: 20px;
+        text-decoration: none;
+        position: fixed;
+        top: 0;
+        right: 0;
+      }
+      nav a {
+        color: white;
+        text-decoration: none;
+        border: 2px solid white;
+        padding: 8px 16px;
+        border-radius: 5px;
+        margin-left: 20px;
+        transition: color 0.3s ease, background-color 0.3s ease;
+      }
+      nav a:hover {
+        color: darkorange;
+        background-color: white;
+      }
+      nav a:active {
+        color: gray;
+      }
 
-  <style>
-    body {
-      background-color: wheat;
-      /*background-image: url("https://images3.alphacoders.com/756/75619.jpg");
-      background-repeat: no-repeat;
-      background-attachment: fixed;*/
-    }
-    nav {
-      margin-left: 900px;
-      margin-top: 5px;
-      text-decoration: none;
-      
-     
-    }
-    nav a {
-      color: black;
-      text-decoration: none;
-      border: 2px solid black;
-      width: fit-content;
-      height: fit-content;
-      padding: 8px 16px;
-      border-radius: 5px;
-    }
-    a:hover {
-      color:darkorange;
-    }
+      img {
+        width: 550px;
+        height: 550px;
+        border: 10px solid wheat;
+        border-radius: 50%;
+        object-fit: cover;
+        margin-left: 120px;
+        transition: all 0.4s ease-in-out;
+      }
 
-    a:active {
-      color: gray;
-    }
+      img:hover {
+        width: 450px; /* Increased size on hover */
+        height: 450px;
+        border-color: darkorange; /* Change border color */
+        transform: scale(0.8); /* Slight zoom effect */
+        box-shadow: 0 0 20px darkorange; /* Add shadow on hover */
+      }
 
-    img {
-      width: 400px;
-      height: 399px;
-      border: 200px;
-      border-collapse: collapse;
-      border-radius: 50%;
-      object-fit: cover;
-      padding: 100px;
-      margin-left: 120px;
-      border-color: wheat;
-    }
-    h1 {
-      margin: 30px;
-      color: black;
-    }
+      h1 {
+        margin: 30px;
+        color: white;
+        font-size: 2.5rem;
+        transition: color 0.3s ease-in-out;
+      }
 
-     #Skills {
-        background:wheat;
+      h1:hover {
+        color: darkorange;
+      }
+
+      #Skills {
+        background: black;
         padding: 20px;
         border-radius: 10px;
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-        border: 1px solid black;
-        border-color: black;
+        border: 1px solid white;
+        animation: fadeIn 1s ease-out;
       }
-
       #Skills ul {
         list-style: none;
         margin: 0;
         padding: 0;
         gap: 10px;
+        display: flex;
         justify-content: center;
+        flex-wrap: wrap;
       }
-      #Skills h3{
-        color: #4a148c;
+      #Skills h3 {
+        color: white;
       }
-
       #Skills ul li {
         font-size: 16px;
-        color:black;
+        color: white;
         font-weight: 500;
         padding: 5px 10px;
-        background: wheat;
+        background: #e1bee7;
         border-radius: 5px;
-        width: fit-content;
+        margin: 5px;
+        transition: background-color 0.3s ease;
       }
-    #Aboutme {
-      border: 2px solid black;
-      width: fit-content;
-      height: fit-content;
-      color:black;
-      border-radius: 10px;
-    }
-   #projects {
-        background: wheat;
+      #Skills ul li:hover {
+        background-color: darkorange;
+        color: white;
+      }
+
+      #Aboutme {
+        border: 2px solid white;
+        width: 1480px;
+        height: auto;
+        color: white;
+        border-radius: 10px;
+        background: black;
+        margin-top: 30px;
+        padding: 20px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+      }
+
+      #projects {
+        background: black;
         padding: 20px;
         border-radius: 10px;
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-        border: 1px solid black;
-        border-color: black;
+        margin-top: 30px;
       }
 
       #projects ul {
@@ -107,138 +130,256 @@
       #projects ul li {
         margin-bottom: 15px;
         padding: 10px;
-        background: wheat;
-        border-left: 4px solid #4a148c;
+        background: black;
+        border-left: 4px solid white;
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        transition: background-color 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      #projects ul li:hover {
+        background-color: darkorange;
+        box-shadow: 0 0 20px wheat;
       }
 
       #projects ul li h3 {
         font-size: 18px;
-        color: #4a148c;
+        color: white;
         margin: 0 0 5px;
       }
 
       #projects ul li p {
         margin: 0;
-        color:black;
+        color: white;
         font-size: 14px;
         line-height: 1.6;
       }
 
-    .main {
-      display: flex;
-      align-items: center;
-    }
-    .image {
-      margin-right: 20px;
-    }
-    
-  </style>
-  <body>
-    <h3 style="color: black">IRFAN</h3>
-    <nav>
-      <a href="#Home" >Home </a>
-      <a href="#Skills"> Skills</a>
-      <a href="#Aboutme"> Aboutme </a>
-      <a href="#projects"> Projects </a>
-      <a href="#Contact">Contact</a>
+      .main {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        transition: all 0.5s ease-in-out;
+      }
 
+      .main:hover {
+        transform: scale(1.05); /* Slight zoom effect */
+      }
+
+      .image {
+        margin-right: 20px;
+      }
+
+      /* Media queries for responsiveness */
+      @media (max-width: 768px) {
+        nav {
+          margin-left: 0;
+          display: flex;
+          justify-content: center;
+          gap: 10px;
+        }
+        img {
+          width: 200px;
+          height: 200px;
+          margin-left: 0;
+          padding: 0;
+        }
+        .main {
+          flex-direction: column;
+          text-align: center;
+        }
+        h1 {
+          margin: 10px;
+          font-size: 1.5rem;
+        }
+      }
+      #Contact {
+        border: 1px solid white;
+        border-radius: 7px;
+      }
+
+      /* Keyframe animations */
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h3 style="color: white">IRFAN</h3>
+    <nav>
+      <a href="#Home">Home</a>
+      <a href="#Skills">Skills</a>
+      <a href="#Aboutme">Aboutme</a>
+      <a href="#projects">Projects</a>
+      <a href="#Contact">Contact</a>
     </nav>
     <h4>HOME</h4>
-
     <div class="main">
       <img
         src="https://img.freepik.com/premium-photo/handsome-anime-boy-profile-red-background_864588-93227.jpg"
         alt="profile photo"
         class="image"
-        width="200"
       />
-      <h1>
+      <h1 style="color: white">
         HI, <br />
-        <span style="font-weight: bold">I'M MOHAMED IRFAN</span>
+        <span style="font-weight: bold; color: white">I'M MOHAMED IRFAN</span>
         <br /><br /><br />
         <span style="font-weight: 100">
-          "Welcome to my portfolio! I am a passionate software developer".
+          "Welcome to my portfolio! I am a passionate software developer."
         </span>
+        <br /><br /><br />
+        <div class="res">
+          <span
+            style="
+              border: 3px solid white;
+              border-radius: 8px;
+              text-decoration: none;
+            "
+            ><a
+              style="text-decoration: none; color: white"
+              href="https://drive.google.com/drive/folders/17BdNuSp17S-cZ9rMGWpt5m9kXr_QG75r"
+              >Download CV</a
+            ></span
+          >
+        </div>
       </h1>
     </div>
+    <br /><br />
     <div id="Aboutme">
-      <h4>ABOUTME</h4>
-      <p>
-        "I am a B.E. graduate in Electronics and Communication Engineering with a strong passion for technology and problem-solving. As a Full-Stack Developer, I specialize in crafting efficient, user-friendly, and visually appealing web solutions.
-
-With a solid foundation in modern frameworks and technologies, I enjoy transforming ideas into high-quality projects tailored to user needs. Whether it's designing intuitive user interfaces, optimizing backend functionality, or ensuring seamless integration, I am committed to delivering excellence in every project I undertake."
-        </p>
+      <h2 style="color: white">ABOUTME</h2>
+      <p style="color: white; font-size: larger">
+        Hello! I’m a passionate software developer with a B.E. in Electronics
+        and Communication Engineering. I specialize in building efficient,
+        user-friendly, and visually appealing web and software solutions. My
+        journey in technology has been driven by curiosity and the desire to
+        solve real-world problems through innovative approaches.
+        <br /><br />
+        <span style="color: white">My Vision:</span>
+        <br /><br />
+        To continuously grow as a developer, embrace challenges, and contribute
+        to meaningful projects that make a positive impact. Whether it’s
+        collaborating on a dynamic team or leading independent initiatives, I’m
+        always ready to deliver excellence.
+      </p>
     </div>
+
+    <!-- Projects Section -->
     <section id="projects">
-        <h2>PROJECTS</h2>
-        <ul>
-          <li>
-            <h3>Bank Console Application</h3>
-            <p>
-              Developed a banking system with features for account management, transaction processing, and security.
-            </p>
-          </li>
-          <li>
-            <h3>Vehicle Parking System</h3>
-            <p>
-            Created a system to manage parking spot availability, track vehicle details, and calculate fees.
-             Using Java (multithreading, collections, JDBC), MySQL.
-            </p>
-          </li>
-          <li>
-            <h3>Catering Service Booking System</h3>
-            <p>
-            Built a booking system for event management, including food orders and payment processing.
-             Using Java, MySQL.
+      <h2 style="color: white">PROJECTS</h2>
+      <ul>
+        <li>
+          <h3 style="color: white">Bank Console Application</h3>
+          <p>
+            Developed a console-based banking system using Java with features
+            like account creation, transaction processing, and secure data
+            handling. The project integrates JDBC for database connectivity and
+            implements multithreading for handling multiple operations
+            simultaneously. This application ensures efficient management of
+            banking activities, including deposits, withdrawals, and transfers.
+          </p>
+        </li>
+        <li>
+          <h3 style="color: white">Vehicle Parking System</h3>
+          <p>
+            Created a parking management system using Java and MySQL to track
+            parking spot availability and vehicle details. The system calculates
+            parking fees automatically and employs collections for data
+            handling, multithreading for simultaneous user operations, and file
+            handling for maintaining records. It’s designed for reliability and
+            scalability in real-world applications.
+          </p>
+        </li>
+        <li>
+          <h3 style="color: white">Catering Service Booking System</h3>
+          <p>
+            Built a booking platform for event management using Java and MySQL,
+            allowing users to manage bookings, customize menus, and process
+            payments. The system is optimized for handling large data
+            efficiently and provides a seamless backend to ensure smooth
+            operations. It showcases expertise in database management and
+            backend development.
+          </p>
+        </li>
+        <li>
+          <h3 style="color: white">Event Management System (C)</h3>
+          <p>
+            Designed an event management system in C to manage event schedules,
+            participants, and reports. The application is built with modular
+            programming and efficient data structures, ensuring reliability and
+            low memory usage. It highlights strong skills in core C programming
+            and problem-solving.
+          </p>
+        </li>
+      </ul>
+    </section>
 
-            </p>
-          </li>
-        </ul>
-      </section>
-    </div>
     <section id="Skills">
-        <h2>Skills</h2>
-        <h3>Programming Languages</h3>
-        <ul>
-          <li>HTML</li>
-          <li>CSS</li>
-          <li>Python</li>
-          <li>Java</li>
-          <li>C</li>
+      <h2 style="color: white">Skills</h2>
+      <h3>Programming Languages</h3>
+      <ul>
+        <li style="color: black">HTML</li>
+        <li style="color: black">CSS</li>
+        <li style="color: black">Python</li>
+        <li style="color: black">Java</li>
+        <li style="color: black">C</li>
+      </ul>
+    </section>
 
-        </ul>
-      </section>
     <div id="Contact">
-  <h2>Contact</h2>
-  <p>Connect with me on:</p>
-  <div style="display: flex; justify-content: center; gap: 20px; align-items: center;">
- 
-    <a href="https://www.instagram.com" target="_blank" style="text-decoration: none;">
-      <img
-        style="width: 50px; height: 60px;"
-        src="https://static.vecteezy.com/system/resources/previews/018/930/413/large_2x/instagram-logo-instagram-icon-transparent-free-png.png"
-        alt="Instagram"
-      />
-    </a>
-    
-    <a href="https://www.linkedin.com/in/mohamed-irfan-a34257337/" target="_blank" style="text-decoration: none;">
-      <img
-        style="width: 50px; height: 60px;"
-        src="https://static.vecteezy.com/system/resources/previews/021/460/490/original/linkedin-logo-free-download-free-png.png"
-        alt="LinkedIn"
-      />
-    </a>
-    <a href="https://github.com/Mohamedirfan1234" target="_blank" style="text-decoration: none;">
-      <img
-        style="width: 45px; height: 45px;"
-        src="https://cdn-icons-png.flaticon.com/512/25/25231.png"
-        alt="GitHub"
-      />
-    </a>
-  </div>
-       <footer>
-      <p>&copy; 2025 Mohamed Irfan. All Rights Reserved.</p>
-    
+      <h2 style="color: white">Contact</h2>
+      <p>Connect with me on:</p>
+      <div
+        style="
+          display: flex;
+          justify-content: center;
+          gap: 20px;
+          align-items: center;
+        "
+      >
+        <a
+          href="https://www.instagram.com"
+          target="_blank"
+          style="text-decoration: none"
+        >
+          <img
+            style="width: 30px; height: 30px; margin-right: 20px"
+            src="https://static.vecteezy.com/system/resources/previews/018/930/413/large_2x/instagram-logo-instagram-icon-transparent-free-png.png"
+            alt="Instagram"
+          />
+        </a>
+        <a
+          href="https://www.linkedin.com/in/mohamed-irfan-a34257337/"
+          target="_blank"
+          style="text-decoration: none"
+        >
+          <img
+            style="width: 30px; height: 30px; margin-right: 20px"
+            src="https://static.vecteezy.com/system/resources/previews/021/460/490/original/linkedin-logo-free-download-free-png.png"
+            alt="LinkedIn"
+          />
+        </a>
+        <a
+          href="https://github.com/Mohamedirfan1234"
+          target="_blank"
+          style="text-decoration: none"
+        >
+          <img
+            style="width: 30px; height: 30px; margin-right: 20px"
+            src="https://pngimg.com/uploads/github/github_PNG28.png"
+            alt="GitHub"
+          />
+        </a>
+      </div>
+      <footer>
+        <p style="text-align: center; color: white">
+          &copy; 2025 Mohamed Irfan. All Rights Reserved.
+        </p>
+      </footer>
+    </div>
   </body>
 </html>
